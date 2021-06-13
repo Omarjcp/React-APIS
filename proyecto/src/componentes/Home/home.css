@@ -2,4 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: auto;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFGNDrXArH6bdh40H6_Ygto3tdybFAxKzHMg&usqp=CAU');
+    background-size: contain;
+    background-attachment: fixed;
+    margin-top: 2.3rem;
 }

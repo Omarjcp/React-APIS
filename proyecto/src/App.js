@@ -5,16 +5,18 @@ import axios from 'axios';
 import Navbar from './componentes/Navbar/Navbar';
 import Home from './componentes/Home/Home';
 import Episodio from './componentes/Episodio/Episodio';
+import {CardRandom} from './componentes/CardRandom/CardRandom';
 
 function App() {
 
   const [episodes, setEpisodes] = useState([])
 
   useEffect(() => {
-    axios('https://breakingbadapi.com/api/episodes').then(({data}) => {
-      setEpisodes(data)
-    })
+    axios('https://breakingbadapi.com/api/episodes')
+    .then(({data}) => setEpisodes(data))
+    .catch(error => console.log(error))
   }, [])
+
 
 
   const searchEpisode = (obj) => {
@@ -26,14 +28,22 @@ function App() {
   return (
     <div > 
       <Navbar />
+
       <Route 
         exact path ='/'
         render={() => <Home episodes={episodes} />}
       />
+
       <Route
       path='/episodio/:id'
       render={(obj) => <Episodio episode={searchEpisode(obj)}/>}
       />
+
+      <Route
+      exact path='/cardrandom'
+      render={() => <CardRandom />}
+      />
+      
     </div>
   );
 }
