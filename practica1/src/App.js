@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import Navbar from './components/Navbar/Navbar'
+import Home from './components/Home/Home';
+import Ranks from './components/Ranks/Ranks'
+import Maps from './components/Maps/Maps'
+import Sprays from './components/Sprays/Sprays'
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar />
+    <Route exact path='/' render={() => <Home />}/>
+    <Route path ='/Ranks' render={() => <Ranks />}/>
+    <Route path ='/Maps' render={() => <Maps />}/>
+    <Route path ='/Sprays' render={() => <Sprays />}/>
+    </>
   );
 }
 
