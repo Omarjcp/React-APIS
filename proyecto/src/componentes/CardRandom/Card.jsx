@@ -1,13 +1,13 @@
 import './card.css'
 
-export const Card = ({random}) => {
+export const Card = ({random, loading}) => {
 
 
     return (
         <>
         <div className='cont'>
-
-                <img className='imagen-personaje' src={random.img} alt="imagen del personaje" />
+            
+                {loading ? <h1>CARGANDO....</h1> : <img className='imagen-personaje' src={random.img} alt="imagen del personaje" />}
 
             <div className='container-nombre'>
                 <label>Nombre:</label>

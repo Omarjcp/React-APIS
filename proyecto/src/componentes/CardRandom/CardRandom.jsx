@@ -5,20 +5,22 @@ import { Card } from './Card';
 
 export const CardRandom = () => {
     
+    const [loading, setLoading] = useState(true)
     const [random, setRandom] = useState([])
 
     useEffect(() => {
         axios('https://breakingbadapi.com/api/character/random')
-        .then(({data}) => setRandom(data[0]))
+        .then(({data}) => {
+            setRandom(data[0])
+            setLoading(false)
+        })
 
         .catch(error => console.log(error))
     }, [])
 
     return (
         <div className="cardRandom">
-            
-                <Card random={random}/>
-            
+             <Card random={random} loading={loading}/>
         </div>
     )
 }
