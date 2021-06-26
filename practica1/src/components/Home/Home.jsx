@@ -1,11 +1,14 @@
-
+import { ContenedorHome, Valorant, Description } from './styled'
 
 
 const Home = () => {
     return (
-        <>
-            <h1>HOME</h1>
-        </>
+        <ContenedorHome>
+
+            <Valorant>Valorant</Valorant>
+            <Description>A 5v5 character-based tactical shooter</Description>
+
+        </ContenedorHome>
     )
 }
 

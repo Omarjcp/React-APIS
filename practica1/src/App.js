@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Ranks from './components/Ranks/Ranks'
 import Maps from './components/Maps/Maps'
 import Sprays from './components/Sprays/Sprays'
+import Agents from './components/Agents/Agents';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <>
     <Navbar />
     <Route exact path='/' render={() => <Home />}/>
+    <Route path ='/Agents' render={() => <Agents />}/>
     <Route path ='/Ranks' render={() => <Ranks />}/>
     <Route path ='/Maps' render={() => <Maps />}/>
     <Route path ='/Sprays' render={() => <Sprays />}/>

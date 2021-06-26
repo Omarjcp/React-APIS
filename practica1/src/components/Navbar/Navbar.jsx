@@ -15,6 +15,7 @@ const Navbar = () => {
 
             <div style={{marginLeft:'2rem'}}>
                 <Linknav to="/">Home</Linknav>
+                <Linknav to="Agents">Agents</Linknav>
                 <Linknav to="Ranks">Ranks</Linknav>
                 <Linknav to="Maps">Maps</Linknav>
                 <Linknav to="Sprays">Sprays</Linknav>

@@ -10,7 +10,7 @@ export const Linknav = styled(Link)`
         color: #666565;
         font-size: 1.2rem;
         font-weight: 500;
-        margin: 0 .1rem 0 .1rem;
+        margin: 0 .3rem 0 .1rem;
         padding: .4rem;
 
         &:hover {
@@ -22,6 +22,9 @@ export const Linknav = styled(Link)`
 export const NavB = styled.nav`
         display: flex;
         background-color: #1b0000;
-        border-bottom: 1px solid #ff0000;
+        border-bottom: 1.5px solid #666565;
         padding: .7rem;
+        position: fixed;
+        top: 0; 
+        width: 100%;
     `
